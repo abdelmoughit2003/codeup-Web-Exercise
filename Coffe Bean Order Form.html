@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Bean Order Form</title>
+</head>
+<body>
+<form method="get" action="#">
+
+  <h2>Coffe Bean Order Form</h2>
+
+  <label for="type of roast">Type of roast</label>
+  <select id="type of roast" name="type of roast[]">
+    <option selected>light</option>
+    <option>dark</option>
+  </select>
+  <p>
+    <label for="quantity">your quantity</label>
+    <input id="quantity" name="quantity" type="text" placeholder="Here your quantity please">
+    <input type="checkbox" id="mailing_list" name="mailing_list" value="yes" checked>
+    <label for="mailing_list">Please keep me signing up</label>
+    <label for="address">
+      <input id="address" name="adress" type="text" placeholder=" please type your adress"></label>
+  </p>
+  <button type="submit">submit</button>
+</form>
+
+<form method="get" action="https://www.reddit.com/">
+  <p>
+    <label for="username">your search</label>
+    <input id="username" name="v" type="text" placeholder="Here your research please">
+    <label for="sorted by">Sorted by</label>
+    <select id="sorted by" name="v">
+      <option selected>top</option>
+      <option>New</option>
+      <option >Relevance</option>
+    </select>
+    <button type="submit">submit</button>
+  </p>
+</form>
+
+<form method="get" action="https://www.amazon.com/search">
+  <p>
+    <label for="username">your search</label>
+    <input id="username" name="username" type="text" placeholder="Here your research please">
+    <button type="submit">submit</button>
+  </p>
+</form>
+</body>
+</html>

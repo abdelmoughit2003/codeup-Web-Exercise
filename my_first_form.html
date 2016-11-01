@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML Form</title>
+</head>
+<body>
+<form method="post" action="http://requestb.in/114nljp1">
+  <p>
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" placeholder="Enter your username" >
+  </p>
+  <p>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" placeholder="Enter your username">
+  </p>
+  <p>
+    <button type="submit" value="login">Login</button>
+  </p>
+</form>
+<h1>User Login</h1>
+<form method="post" action="http://requestb.in/1e8xjs61">
+  <p>
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" placeholder="Enter your username" >
+  </p>
+  <p>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" placeholder="Enter your username">
+  </p>
+  <p>
+    <button type="submit">Login</button>
+  </p>
+  <h1>Compose an Email</h1>
+  <p>
+    <label for="To">To</label>
+    <input id="To" name="To" type="text" size="25">
+  </p>
+  <p>
+    <label for="from">From</label>
+    <input id="from" name="From" type="text" size="22">
+  </p>
+  <p>
+    <label for="Subject">Subject</label>
+    <input id="subject" name="subject" type="text">
+  </p>
+  <h1>Multiple Choice Test</h1>
+  <p>Where are you from?</p>
+  <label>
+    <input type="radio" name="q1" value="USA">
+    USA
+  </label>
+  <label>
+    <input type="radio" name="q1" value="Morocco">
+    Morocco
+  </label>
+  <label>
+    <input type="radio" name="q1" value="Australia">
+    Australia
+  </label>
+  <label>
+    <input type="radio" name="q1" value="South africa">
+    South africa
+  </label>
+  <p>Whats you favorite color?</p>
+  <label>
+    <input type="radio" name="q2" value="Green">
+    Green
+  </label>
+  <label>
+    <input type="radio" name="q2" value="Red">
+    Red
+  </label>
+  <label>
+    <input type="radio" name="q2" value="White">
+    White
+  </label>
+  <label>
+    <input type="radio" name="q2" value="Yellow">
+    Yellow
+  </label>
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+  <h1>what are the colors of USA flag</h1>
+  <p>
+    <label>
+      <input type="checkbox" id="color of the flag" name="color of the flag[]" value="red" >
+      red
+    </label>
+    <label>
+      <input type="checkbox" id="color of the flag" name="color of the flag[]" value="yellow">
+      yellow
+    </label>
+    <label>
+      <input type="checkbox" id="color of the flag" name="color of the flag[]" value="white" >
+      white
+    </label>
+    <label>
+      <input type="checkbox" id="color of the flag" name="color of the flag[]" value="blue" >
+      blue
+    </label>
+  </p>
+  <button type="submit">Submit</button>
+</form>
+<form method="post" action="http://requestb.in/1e8xjs61">
+  <h1>Select Testing</h1>
+  <label for="citizenship">are you a citizen?:</label>
+  <select id="citizenchip" name="citizenchip">
+    <option value="1" selected>Yes</option>
+    <option value="0">No</option>
+  </select>
+  <p>
+    <label for= "color of the flag">what are the colors of USA flag?</label>
+    <select id="color of the flag" name="color of the flag[]" multiple>
+      <option selected>red</option>
+      <option >yellow</option>
+      <option >white</option>
+      <option >blue</option>
+    </select>
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+</form>
+
+</body>
+</html>

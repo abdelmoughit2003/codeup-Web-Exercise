@@ -1,0 +1,45 @@
+.move{
+  background-color: beige;
+  color: black;
+}
+#nve{
+  margin-left: 700px;
+}
+body{
+  background-image: url(../africanlion-006_0.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#nameLink{
+  font-family: 'Dancing Script', cursive;
+}
+.navbar-brand{
+  color: black;
+}
+.dropdown-toggle{
+  color: black;
+
+}
+em{
+  color:yellow;
+}
+#push{
+  margin-left: 20px;
+}
+#welcome{ margin-top: 80px;
+          text-align: center;
+          color: yellowgreen;
+          font-size: 70px;
+          background-color: chartreuse;
+
+
+}
+#cool{  text-align: center;
+        color: black;
+        font-size: 50px;
+        background-color: chartreuse;
+}
+#color{
+
+}

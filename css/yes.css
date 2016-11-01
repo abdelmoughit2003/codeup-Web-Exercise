@@ -1,0 +1,74 @@
+
+body {  background-size: 100%,100%;
+        background-repeat: no-repeat;
+        transition: background-image 1s ease-in-out;
+        background-image:url(../d5a3498cfc9e53130b5f815ef44713b7_Jet.jpg);
+}
+body:hover {
+        background-image:url(../03recipehealth-superJumbo-v2.jpg);
+}
+
+h1{ color: chartreuse;
+    background-color: #333333;
+    text-decoration: underline;
+    text-align: center;
+    text-decoration: underline;
+    font-family: "Century Gothic";
+
+}
+h4{
+  text-decoration: underline;
+  font-family: "Euphemia UCAS";
+}
+h2{ text-decoration: underline;
+    font-family: "Century Schoolbook";
+}
+
+
+#email{ margin-left: 80px;
+        margin-left: 20px;
+        margin-bottom: 5px;
+
+}
+#crust{margin-left: 160px;
+
+}
+#toppings{margin-left: 240px;
+
+}
+#delivery{margin-left: 320px;
+}
+#design{
+  text-align: center;
+  color:sandybrown;
+  background-color:darkgreen;
+  width: 300px;
+  height: 70px;
+  font-family: "Apple Braille";
+  font-size: large;
+  margin-left: 450px;
+
+}
+#menu{
+      font-style: italic;
+      font-size: 20px;
+      margin-bottom: 10px;
+  position: relative;
+}
+#connect {
+  position: absolute;
+  float: right;
+  right: 100px;
+  bottom: 60px;
+}
+h2:hover{
+  color: white;
+
+
+}
+a:hover{
+  color: red;
+}
+body:hover{
+
+}
