@@ -1,0 +1,64 @@
+.move{
+  background-color: beige;
+  color: black;
+}
+#nve{
+  margin-left: 700px;
+}
+.position{
+
+  background-image: url(../IMG/africanlion-006_0.jpg);
+  height: 1000px;
+  margin-top:-20px;
+  background-repeat: no-repeat;
+  margin-bottom: 100px;
+
+}
+#nameLink{
+  font-family: 'Dancing Script', cursive;
+}
+.navbar-brand{
+  color: black;
+}
+.dropdown-toggle{
+  color: black;
+
+}
+em{
+  color:yellow;
+}
+#push{
+  margin-left: 20px;
+}
+.positione {
+  background-image: url(../IMG/Nature-of-Brazil.jpg);
+ height: 700px;
+  margin-top:-400px;
+
+}
+#welcome{
+  text-align: center;
+  font-size: 70px;
+  margin-top: 20px;
+  color: white;
+}
+#cool{
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+.positione img{
+  margin-left: 550px;
+}
+.positione h1{
+  margin-left: 580px;
+}
+.positione p {
+  font-style: italic;
+  font-size: 20px;
+  color: black;
+  background-color: lawngreen;
+}
+
+
+
