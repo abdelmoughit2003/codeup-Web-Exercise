@@ -1,13 +1,10 @@
 
-while (!operation ) {
-    var operation = prompt('which operation do you choose to do ?\n1: Addition \n2: Subtraction\n3: Division\n4:multiplication ')
-
-while(!(num1/1==num1)){
-        var num1 = parseInt(prompt('please type the number'));}
+while (!(operation/1==operation)){
+        var operation = parseInt(prompt('which operation do you choose to do ?\n1: Addition \n2: Subtraction\n3: Division\n4:multiplication '))}
     while(!(num1/1==num1)){
+        var num1 = parseInt(prompt('please type the number'));}
+    while(!(num2/1==num2)){
         var num2 = parseInt(prompt('please type the number'));}
-
-
 
          if (operation == "1") {
             function add(num1,num2) {
@@ -45,7 +42,7 @@ while(!(num1/1==num1)){
             }
 
             alert(multiply(num1,num2))
-        }
+
 
 
 }

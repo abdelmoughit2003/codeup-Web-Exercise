@@ -8,8 +8,14 @@ var names= ['jack', 'joe', 'john', 'jojo']
 
 
     // TODO: Create log statements that will print each of the names array elements individually.
-    console.log('My name is : ' + names[0])
-    console.log('My name is : ' + names[1])
-    console.log('My name is : ' + names[2])
-    console.log('My name is : ' + names[3])
+    for (var i = 0; i < names.length ;i++){
+    console.log('My name is : ' + names[i])}
+
+    names.forEach(function(element){
+        console.log(element)
+    });
+
 })();
+
+
+

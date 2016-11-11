@@ -45,3 +45,4 @@ else{
 
 
  (flipACoin===0)? console.log(" Buy a car"): console.log(" Buy a house");
+

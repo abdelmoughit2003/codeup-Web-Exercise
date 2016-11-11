@@ -29,3 +29,4 @@ while (coneInventory > 0) {
         console.log('I can\'t sell you ' + conesToSell + ', I only have ' + coneInventory);
     }
 }
+console.log('Yeah I sold all cones.')

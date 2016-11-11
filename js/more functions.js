@@ -129,10 +129,10 @@ function convertMonthNumberToName(Month) {
 var months = convertMonthNumberToName('Month');
 console.log(months);
 // will take in a starting number of cones and simulate customers coming and buying cones
+var coneInventory = Math.floor(Math.random() * 50) + 50;
+console.log(coneInventory);
 function sellCones(coneInventory) {
 
-    var coneInventory = Math.floor(Math.random() * 50) + 50;
-    console.log(coneInventory);
     var conesToSell;
     var result;
     result = 'Yeah I sold all cones.';
