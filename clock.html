@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+</head>
+<body>
+<h2 id="message">This BOM will self destruct in <span id="timer">15</span> seconds...</h2>
+<button id="btn1">Countdown!</button>
+<button id="btn2">Stop!</button>
+<script>
+
+        function bomber1() {
+        var count = 15;
+
+        var interval = 500;
+         bomb = setInterval(function () {
+            if (count <=0) {
+                alert('EXTERMINATE!');
+                clearInterval(bomb);
+
+            } else {
+                document.getElementById('timer').innerHTML = count;
+                count--;
+            }
+        }, interval)}
+
+        function bomber2() {
+
+            clearInterval(bomb);
+
+        }
+        // add event bomber to btn1
+        var btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', bomber1);
+
+        // add event bomber to btn2
+        var btn2 = document.getElementById('btn2');
+        btn2.addEventListener('click', bomber2);
+
+
+
+</script>
+</body>
+</html>
