@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+        body{
+            background-image:url("IMG/wall.jpg");
+        }
+        .fluid-container{
+            margin-left: auto;
+            margin-right: auto;
+            width: 61%;
+            border: 2px solid black
+        }
+        #map-canvas {
+            width: 60vw;
+            height: 70vh;
+        }
+        h1{
+            background-color: #4cae4c;
+            color: inherit;
+        }
+        #floating-panel {
+
+            top: 10px;
+            left: 25%;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 2px solid #999;
+            text-align: center;
+            font-family: 'Roboto','sans-serif';
+            line-height: 30px;
+
+        }
+        #map {
+            height: 100%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class = "fluid-container text-center">
+<h1>The road to my favorite restaurants</h1>
+    <div id="map-canvas"></div>
+    <div id="floating-panel">
+        <input id="address" type="textbox">
+        <input id="submit" type="button" value="Geocode">
+    </div>
+    <div id="map"></div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZS533aFB5tPD7xwoJRdPkGDJQF6L6UU0"></script>
+<script type="text/javascript">
+    (function() {
+        "use strict";
+
+        var mapOptions = {
+
+            zoom: 3,
+            center: {
+                lat: 29.547040,
+                lng:-98.576840
+            }
+
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+        var gino =
+                '<img src =IMG/Da-gino.jpg >'+
+                '<h1>Welcome to Da Gino</h1>'+
+                '<p>'+
+                'At Louie Italian Restaurant our customers and neighbor’s'+
+                'are posting feedbacks that we have the best inviting' +
+                ' atmosphere, best priced menu, amazing wine list and ' +
+                'friendly service. It’s the type of place you can bring ' +
+                'your first date, family or friend to share a special event ' +
+                'or just a place to have the best of Lunch or Dinner.'+
+                '</p>';
+        var luigi =
+                '<img src =IMG/luigi.jpg height="500" >'+
+                '<h1>Welcome to Luigi </h1>'+
+                '<p>'+
+                'At Cured Restaurant our customers and neighbor’s'+
+                'are posting feedbacks that we have the best inviting' +
+                ' atmosphere, best priced menu, amazing wine list and ' +
+                'friendly service. It’s the type of place you can bring ' +
+                'your first date, family or friend to share a special event ' +
+                'or just a place to have the best of Lunch or Dinner.'+
+                '</p>';
+        var peiwei =
+                '<img src =IMG/pei-wei.jpg >'+
+                '<h1>Welcome to Pei wei</h1>'+
+                '<p>'+
+                'At Bella on the river Restaurant our customers and neighbor’s'+
+                'are posting feedbacks that we have the best inviting' +
+                ' atmosphere, best priced menu, amazing wine list and ' +
+                'friendly service. It’s the type of place you can bring ' +
+                'your first date, family or friend to share a special event ' +
+                'or just a place to have the best of Lunch or Dinner.'+
+                '</p>';
+
+        var restaurant =[
+            { address :"Rue Brahim Nakhai، Dar-el-Beida, Morocco", content:gino, url:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+            { address :"Via Federico Nansen, 6, 00154 Roma, Italy", content:luigi, url:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+            { address :"11267 Huebner Rd San Antonio, TX 78230", content:peiwei, url:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'}
+        ];
+
+        restaurant.forEach(function(element){
+
+            var geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({ "address": element.address }, function(results, status) {
+
+                if (status == google.maps.GeocoderStatus.OK) {
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: element.content
+
+                    });
+
+                    var marker = new google.maps.Marker({
+                        position:results[0].geometry.location,
+                        map: map,
+                        animation: google.maps.Animation.DROP,
+                        draggable: true,
+                        icon:element.url
+
+                    });
+                    marker.addListener('click', function() {
+                        infowindow.open(map, marker);
+                    });
+
+                } else {
+                    alert("Geocoding was not successful - STATUS: " + status);
+                }
+
+            });//for geocoder
+        });//for each function
+        var geocoder = new google.maps.Geocoder();
+        document.getElementById('submit').addEventListener('click', function() {geocodeAddress(geocoder, map);});
+
+        function geocodeAddress(geocoder, resultsMap) {
+            var address = document.getElementById('address').value;
+            geocoder.geocode({'address': address}, function(results, status) {
+                if (status === 'OK') {
+                    resultsMap.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: resultsMap,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+    })();//IFEE
+
+
+            </script>
+        </div>
+    </body>
+</html>
