@@ -65,23 +65,20 @@
     };
     // ------------------------------------------------------------------------------------------------------------------------------------
     var dot = function(){
-        counter1 += 1;
         var value = midbox.value;
         if (value == "") {
             num= this.innerHTML;
-                    if (counter1 > 1) {
-                        alert("NO,Come on Dude");
-                    } else {
+                    if (counter1 < 1) {
                         leftbox.value += num;
+                        counter1 += 1;
                     }
         }
         else  {
             num= this.innerHTML;
-                    if (counter1 > 3) {
-                        alert("No");
-                    } else {
-                        rightbox.value += num;
-                    }
+                  if (counter2 < 1){
+                         rightbox.value += num;
+                         counter2 += 1;
+                     }
         }
     };
 // ------------------------------------------------------------------------------------------------------------------------------------
@@ -156,6 +153,7 @@
     };
 // ------------------------------------------------------------------------------------------------------------------------------------
     var counter1 = 0;
+    var counter2 = 0;
     var powe;
     var pie;
     var C;
