@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+
+<h1>Konami Code</h1>
+
+<script>
+    $(document).ready(function() {
+    var     up = 38,
+            down = 40,
+            left = 37,
+            right = 39,
+            A = 65,
+            B = 66,
+            Enter =13;
+
+    var	kona = [up,up,down,down,left,right,left,right,B,A,Enter];
+    var emptyarray=[];
+
+        $(document).keyup(function(event) {
+            emptyarray.push(event.keyCode);
+            if ( emptyarray.toString().indexOf(kona) >= 0 ) {
+                alert('Finally i did it');
+                emptyarray=[];
+            }
+
+    });
+    });
+</script>
+</body>
+</html>

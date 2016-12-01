@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery_exercises</title>
+    <script src="js/jquery.js"></script>
+</head>
+    <body>
+        <h1 id = "codeup">hello world</h1>
+        <p id =  'name'>My name is <em>abdou</em> and when <strong>I'm making myself something</strong> to eat and <br>my sister says she's hungry too..</p>
+        <div id = 'favorite'>My favorite Quote</div>
+        <h2 id =  'learn'></h2>
+        <ul class = 'web' >
+            <li>Funny.</li>
+            <li>Challenging.</li>
+            <li>Lucrative.</li>
+        </ul>
+        <div class = 'codeup'>click me!</div>
+        <div class = 'codeup'>click him!</div>
+        <div class = 'codeup'>click yourself!</div>
+        <button id = 'yeah' > oh yeahhhhhh!</button>
+    <script>
+
+    $(document).ready(function() {
+        $('li').css('font-size','40px');
+        $('#learn').css('color','green');
+        $('.codeup').css({'border':'1px solid red','background-color':'green','font-size':'35px','width':'50%','text-align':'center'});
+        $('h1,p').css('background-color','yellow');
+        $('.web').parent().css('text-decoration','underline');
+        var display = $('h1').html();
+        alert(display);
+        $('#yeah').click(function () {
+
+
+            $('h1').text('wowwwww')
+
+        });
+        $('#codeup').hover(
+                function() {
+                    $(this).css('background-color', '#FF0');
+                },
+                function() {
+                    $(this).css('background-color', '#FFF');
+                }
+        );
+        $('p').dblclick(function () {
+            $('p').css('font-size','18px')
+        });
+        $('li').hover(function () {
+            $(this).css({'color': 'red'});
+
+        },function() {
+            $(this).css({'color':'black'});
+        })
+    });
+  
+    </script>
+    </body>
+</html>
