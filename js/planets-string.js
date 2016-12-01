@@ -5,7 +5,7 @@ var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
 var planetsArray;
 
 // TODO: Convert planetsString to an array, save it to planetsArray.
- planetsArray = planetsString.split("|")
+ planetsArray = planetsString.split("|");
 console.log(planetsArray);
 
 //TODO: Create a string with <br> tags between each planet. console.log() your results.
