@@ -9,28 +9,24 @@
 <button id="btn1">Countdown!</button>
 <button id="btn2">Stop!</button>
 <script>
+
         var bomb;
         var count = 15;
         var interval = 500;
+
         function bomber1() {
 
          bomb = setInterval(function () {
             if (count <=0) {
                 alert('EXTERMINATE!');
-
                 clearInterval(bomb);
-
-
             } else {
-                document.getElementById('timer').innerHTML = count.toFixed(3).replace(".",":");
-
-
-                count-= 0.1;
+                document.getElementById('timer').innerHTML = count.toFixed(3).replace(".",":")
+                count-= 0.1
             }
         }, interval)}
 
         function bomber2() {
-
             clearInterval(bomb);
 
         }
